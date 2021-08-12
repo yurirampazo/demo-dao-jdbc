@@ -1,5 +1,7 @@
 package application;
 
+import model.dao.DaoFactory;
+import model.dao.SellerDao;
 import model.entities.Department;
 import model.entities.Seller;
 
@@ -13,6 +15,9 @@ public class Program {
 
         Seller seller = new Seller(30, "Bob", "bob@test.com", new Date(), 3000.0, obj);
         System.out.println(seller);
+
+        // Injeção de dependências sem explicitar a implementação.
+        SellerDao sellerDao = DaoFactory.createSellerDao();
 
     }
 }
