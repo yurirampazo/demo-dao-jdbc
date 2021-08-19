@@ -20,8 +20,11 @@ public class Program {
         // Injeção de dependências sem explicitar a implementação.
         SellerDao sellerDao = DaoFactory.createSellerDao();
 
+        System.out.println("--------Teste 1: seller findById--------");
         Seller seller = sellerDao.findById(6);
         System.out.println(seller);
+
+        
 
     }
 }
